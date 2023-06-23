@@ -146,11 +146,6 @@
          :map minibuffer-local-map
          ("C-r" . 'counsel-minibuffer-history)))
 
-;; doom modeline
-(use-package all-the-icons)
-(use-package doom-modeline
-  :init (doom-modeline-mode 1))
-
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 

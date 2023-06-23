@@ -4,7 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./home-manager.nix
+      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -114,6 +114,8 @@
       firefox
     ];
   };
+
+  home-manager.users.rafal = import ./home-manager.nix;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

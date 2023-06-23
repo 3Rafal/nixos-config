@@ -83,6 +83,7 @@
   :config (counsel-projectile-mode))
 
 (use-package lsp-mode
+  :hook ((tuareg . lsp))
   :commands lsp
   :init
   (setq lsp-use-native-json t
@@ -91,12 +92,6 @@
 	lsp-diagnostics-modeline-scope :project
 	lsp-file-watch-threshold 5000
 	lsp-ui-doc-show-with-cursor nil))
-
-(with-eval-after-load 'lsp-mode
-  (lsp-register-client
-   (make-lsp-client   :new-connection (lsp-stdio-connection '("dsl" "lsp"))
-                      :major-modes '(yaml-mode)
-                      :server-id 'dsl-lsp)))
 
 (use-package magit
   :defer t
@@ -259,12 +254,6 @@
 ;; ocaml
 ;;; Major mode for editing OCaml files.
 (use-package tuareg :ensure)
-
-;;; Auto completion and more.
-(use-package merlin :ensure
-  :after tuareg
-  :hook
-  (tuareg-mode . merlin-mode))
 
 ;; Consistent indentation.
 (use-package ocp-indent :ensure

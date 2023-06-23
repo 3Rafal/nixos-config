@@ -10,6 +10,11 @@
     };
   };
 
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   home.file = {
     ".emacs.d/init.el".source   = ./sources/init.el;
   };

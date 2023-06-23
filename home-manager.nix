@@ -10,6 +10,10 @@
     };
   };
 
+  home.file = {
+    ".emacs.d/init.el".source   = ./sources/init.el;
+  };
+
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       enable-hot-corners = false;

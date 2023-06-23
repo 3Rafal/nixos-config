@@ -19,5 +19,11 @@ in
         init.defaultBranch = "main";
       };
     };
+
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        enable-hot-corners = false;
+      };
+    };
   };
 }

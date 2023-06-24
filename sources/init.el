@@ -102,7 +102,7 @@
 ; Sort apropos by relevancy
 (setq apropos-sort-by-scores t)
 
-(set-face-attribute 'default nil :family "mononoki" :height 150)
+(set-face-attribute 'default nil :family "mononoki" :height 130)
 
 ; don't create backup and autosave files
 (setq make-backup-files nil

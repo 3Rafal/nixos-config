@@ -112,6 +112,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
+      gnomeExtensions.no-title-bar
+      slack
+      foliate
     ];
   };
 
@@ -124,7 +127,7 @@
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
-      experimental-features = nix-command flakes
+      experimental-features = nix-command flakes repl-flake
     '';
   };
 
@@ -135,6 +138,7 @@
     wget
     git
     emacs
+    silver-searcher
   ];
 
   services.openssh.enable = true;

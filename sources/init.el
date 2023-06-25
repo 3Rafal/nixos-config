@@ -3,6 +3,9 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
+; Start in full screen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ; Enable show-paren-mode
 (show-paren-mode 1)
 (blink-cursor-mode 0)

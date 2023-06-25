@@ -17,6 +17,7 @@
 
   home.file = {
     ".emacs.d/init.el".source   = ./sources/init.el;
+    ".bashrc".source = ./sources/.bashrc;
   };
 
   dconf.settings = {

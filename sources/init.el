@@ -86,7 +86,7 @@
   :config (counsel-projectile-mode))
 
 (use-package lsp-mode
-  :hook ((tuareg . lsp))
+  :hook ((tuareg-mode . lsp))
   :commands lsp
   :init
   (setq lsp-use-native-json t
@@ -94,7 +94,9 @@
 	lsp-log-io nil
 	lsp-diagnostics-modeline-scope :project
 	lsp-file-watch-threshold 5000
-	lsp-ui-doc-show-with-cursor nil))
+	lsp-ui-doc-show-with-cursor nil
+    lsp-lens-place-position 'above-live
+    ))
 
 (use-package magit
   :defer t
@@ -276,7 +278,9 @@
   :mode "\\.nix\\'")
 (use-package direnv
  :config
- (direnv-mode))
+ ((direnv-mode)
+  (setq direnv-always-show-summary nil)))
+
 (use-package web-mode
   :ensure t
   :mode (("\\.html$" .  web-mode)))
